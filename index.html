@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Icon List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        
+        .icon-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .icon-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .icon-card:hover .icon-shadow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .dark .icon-card:hover .icon-shadow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .get-more-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .get-more-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 min-h-screen py-16 px-4 transition-colors duration-300">
+    <!-- Theme Toggle Button -->
+    <button onclick="toggleTheme()" class="theme-toggle bg-white dark:bg-slate-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+        <svg class="w-6 h-6 text-slate-800 dark:text-yellow-400 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+        </svg>
+        <svg class="w-6 h-6 text-slate-800 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+    </button>
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                3D Things
+            </h1>
+            <p class="text-slate-600 dark:text-slate-300 text-lg">Beautiful 3D icons for your next project</p>
+        </div>
+
+        <!-- Icon Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+            <!-- Icon Card 1 -->
+            <div class="icon-card cursor-pointer">
+                <div class="icon-shadow bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                   <img src="1.webp" alt="Design" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Icon Card 2 -->
+            <div class="icon-card cursor-pointer">
+                <div class="icon-shadow bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                    <img src="2.webp" alt="Design" >
+                </div>
+            </div>
+
+            <!-- Icon Card 3 -->
+            <div class="icon-card cursor-pointer">
+                <div class="icon-shadow bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                    <img src="3.webp" alt="Design" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Icon Card 4 -->
+            <div class="icon-card cursor-pointer">
+                <div class="icon-shadow bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                    <img src="4.webp" alt="Design" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Icon Card 5 -->
+            <div class="icon-card cursor-pointer">
+                <div class="icon-shadow bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                    <img src="5.webp" alt="Design" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Icon Card 6 -->
+            <div class="icon-card cursor-pointer">
+                <div class="icon-shadow bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                  <img src="6.webp" alt="Design" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Icon Card 7 -->
+            <div class="icon-card cursor-pointer">
+                <div class="icon-shadow bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                  <img src="7.webp" alt="Design" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Icon Card 8 -->
+            <div class="icon-card cursor-pointer">
+                <div class="icon-shadow bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center aspect-square">
+                  <img src="8.webp" alt="Design" class="w-full h-full object-cover">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Get More Button -->
+        <div class="flex justify-center">
+            <button class="get-more-btn text-white font-semibold px-8 py-4 rounded-full shadow-lg flex items-center gap-2">
+                <span>Get More Icons</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        }
+    </script>
+</body>
+</html>
